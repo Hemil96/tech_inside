@@ -17,6 +17,10 @@ data = {
 
 #scrapping function
 def techinside(company):
+    del list_app_data[:]
+    del list_utilities[:]
+    del list_devops[:]
+    del list_b_tools[:]
     try: #exception handling
         #getting html data into a variable named soup
         html_doc = requests.get("https://stackshare.io/"+company).text
