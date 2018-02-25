@@ -36,6 +36,7 @@ def techinside(company):
         for div in all_divs:
             if "Application and Data" in div.text:
                 app_data = div
+                print app_data
             elif "Utilities" in div.text:
                 utilities = div
             elif "DevOps" in div.text:
@@ -43,27 +44,28 @@ def techinside(company):
             elif "Business Tools" in div.text:
                 b_tools = div
         #appending data
-        for a in app_data.find_all('a'):
-            try:
+        try:
+            for a in app_data.find_all('a'):
                 list_app_data.append(a['data-hint'])
-            except:
-                pass
-        for a in utilities.find_all('a'):
-            try:
+        except:
+            pass
+        try:
+            for a in utilities.find_all('a'):
                 list_utilities.append(a['data-hint'])
-            except:
-                pass
-        for a in devops.find_all('a'):
-            try:
+        except:
+            pass     
+        try:
+            for a in devops.find_all('a'):
                 list_devops.append(a['data-hint'])
-            except:
-                pass
-        for a in b_tools.find_all('a'):
-            try:
+        except:
+            pass     
+        try:
+            for a in b_tools.find_all('a'):
                 list_b_tools.append(a['data-hint'])
-            except:
-                pass
+        except:
+            pass
         #Response
         return json.dumps(data)#json.dumps dump the python dict to json
     except:
         return "Not found"
+
