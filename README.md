@@ -1,6 +1,6 @@
 # Tech Inside
 
-A scrapping script to get the open source tools and SaaS names behind the world's best startups.
+A minimal scrapping script of 60 lines to get the open source tools and SaaS names behind the world's best startups.
 
 ## Getting Started
 
